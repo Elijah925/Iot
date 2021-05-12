@@ -1,0 +1,102 @@
+.nav{
+    width:100%;
+    height:70px;
+  
+}
+.img1{
+    margin-top: 20px;
+}
+
+.content{
+    width: 40%;
+    height: auto;
+    margin-left: 35%;
+    margin-top: 0px;
+    padding-top: 10px;
+       
+}
+.wholecontent{
+    background-color: #fcfcfc;
+}
+
+a:link, a:visited{
+    color:green;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 12px;    
+}
+a:hover, a:active{
+    background-color: green;
+    color: white;
+}
+
+.table{
+    position: fixed;
+    top:6%;
+    text-align: left;   
+    font-weight: bolder;
+    font-size: large;
+    color:#075b60;       
+}
+
+
+
+input{
+	border-radius: 5px;
+	border-color: grey;
+	margin-bottom: 10px;
+	min-width: 250px;
+	width: 40%;
+	height:60px;
+	padding-left: 10px;
+}
+select{
+    border-radius: 5px;
+	border-color: grey;
+	margin-bottom: 10px;
+	min-width: 250px;
+	width: 45%;
+	height:60px;
+	padding-left: 10px;
+}
+.content>div>input:hover{
+	
+	border-color: limegreen;
+	
+}
+.button{
+    background-color: darkgray;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right:0;
+    cursor: pointer;
+    
+}
+.button:hover{
+	background-color: limegreen;
+}
+#links{
+    margin-top: 60px;
+    color: darkgrey;
+    font-size: 18px;
+    float: right;
+   
+}
+
+#form{
+    margin:0px auto;
+    text-align: center;
+    width: 100%;
+    height:1000px;
+}
+#table{
+    text-align: left;
+    margin: 0px auto;
+    width: 100%;
+    height:30px;
+}

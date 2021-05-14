@@ -10,13 +10,13 @@ public class Device implements Serializable {
     private int ID;
     private String name;
     private String type;
-    private int price;
-    private int stock;
+    private String price;
+    private String stock;
    
     
     public Device(){}
 
-    public Device(String name, String type, int price, int stock) {
+    public Device(String name, String type, String price, String stock) {
         this.name = name;
         this.type = type;
         this.price = price;
@@ -24,7 +24,7 @@ public class Device implements Serializable {
         
     }
     
-    public Device(int ID, String name,  String type, int price, int stock) {
+    public Device(int ID, String name,  String type, String price, String stock) {
         this.ID = ID;
         this.name = name;
         this.type = type;
@@ -32,7 +32,7 @@ public class Device implements Serializable {
         this.stock = stock;
     }
 
-    public void updateInfo(String name, String type, int price, int stock) {
+    public void updateInfo(String name, String type, String price, String stock) {
         this.name = name;
         this.type = type;
         this.price = price;
@@ -63,19 +63,19 @@ public class Device implements Serializable {
         this.type = type;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
-    public int getStock() {
+    public String getStock() {
         return stock;
     }
 
-    public void setStock(int stock) {
+    public void setStock(String stock) {
         this.stock = stock;
     }
     

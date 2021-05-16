@@ -5,52 +5,48 @@ import java.io.Serializable;
 
 /**
  *
- * @author lenovo
+ * @author Taoyuan Zhu
  */
 public class User implements Serializable {
     private int ID;
     private String name;
-    private String email;
+    private String userEmail;
     private String password;
     private String phone;
-    private String gender;
-    private String dob;
+    private Boolean isStaff;
     
     public User(){}
 
-    public User(String name, String email, String password, String phone, String gender, String dob) {
+    public User(String name, String email, String password, String phone, Boolean isStaff) {
         this.name = name;
-        this.email = email;
+        this.userEmail = email;
         this.password = password;
         this.phone = phone;
-        this.gender = gender;
-        this.dob = dob;
+        this.isStaff = isStaff;
     }
     
-    public User(int ID, String name, String email, String password, String phone, String gender, String dob) {
+    public User(int ID, String name, String email, String password, String phone, Boolean isStaff) {
         this.ID = ID;
         this.name = name;
-        this.email = email;
+        this.userEmail = email;
         this.password = password;
         this.phone = phone;
-        this.gender = gender;
-        this.dob = dob;
+        this.isStaff = isStaff;
     }
 
-    public void updateInfo(String name, String email, String password, String phone, String gender, String dob) {
+    public void updateInfo(String name, String email, String password, String phone, Boolean isStaff) {
         this.name = name;
-        this.email = email;
+        this.userEmail = email;
         this.password = password;
-        this.phone = phone;
-        this.gender = gender;
-        this.dob = dob;        
+        this.phone = phone; 
+        this.isStaff = isStaff;
     }
 
-    public int getID() {
+    public int getUserID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setUserID(int ID) {
         this.ID = ID;
     }
     
@@ -62,12 +58,12 @@ public class User implements Serializable {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUserEmail() {
+        return userEmail;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUserEmail(String email) {
+        this.userEmail = email;
     }
 
     public String getPassword() {
@@ -85,23 +81,12 @@ public class User implements Serializable {
     public void setPhone(String phone) {
         this.phone = phone;
     }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getDob() {
-        return dob;
-    }
-
-    public void setDob(String dob) {
-        this.dob = dob;
+    
+    public Boolean getIsStaff() {
+        return isStaff;
     }
     
-    
-
+    public void setIsStaff(Boolean isStaff) {
+        this.isStaff = isStaff;
+    }
 }

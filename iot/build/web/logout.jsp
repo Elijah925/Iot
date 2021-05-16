@@ -1,7 +1,7 @@
 <%-- 
     Document   : logout
     Created on : 2021-4-14, 0:11:08
-    Author     : lenovo
+    Author     : Taoyuan Zhu
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

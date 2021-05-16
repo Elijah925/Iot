@@ -1,7 +1,7 @@
 <%-- 
     Document   : register
     Created on : 2021-4-13, 22:18:44
-    Author     : lenovo
+    Author     : Taoyuan Zhu
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -25,20 +25,14 @@
        
             <div class="content">
                 <h2>Register for IoTBay Account</h2>
-                <form id="form" action="welcome.jsp"  method="post">
+                <form id="form" action="RegisterServlet"  method="post">
                 <table id="table">
 
-                    <tr><td><input type="text" placeholder="Enter your name" name="Name" required="true"></td></tr>
-                    <tr><td><input type="text" placeholder="Enter your email" name="Email" required="true"></td></tr>
-                    <tr><td><input type="password" placeholder="Enter your password" name="Password" required="true"></td></tr>
-                    <tr><td><input type = "password" placeholder="Confirm Password"/></td></tr>
-                    <tr><td><input type="text" placeholder="Enter your phone" name="Phone" required="true"></td></tr>
-                    <tr><td><input type="date" name="dob"/> </td></tr>
-                    <tr><td><select name="Gender">
-                                <option value="">Gender</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Other</option>                                                                
+                    <tr><td><input type="text" placeholder="Enter your name" name="name" required="true"></td></tr>
+                    <tr><td><input type="text" placeholder="Enter your email" name="email" required="true"></td></tr>
+                    <tr><td><input type="password" placeholder="Enter your password" name="password" required="true"></td></tr>
+                    <tr><td><input type = "password" placeholder="confirm password"/></td></tr>
+                    <tr><td><input type="text" placeholder="Enter your phone" name="phone" required="true"></td></tr>                                                              
                             </select>
                         </td></tr>
 

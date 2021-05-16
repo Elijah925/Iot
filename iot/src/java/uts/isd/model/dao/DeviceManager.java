@@ -53,12 +53,12 @@ public class DeviceManager {
     
     //Update product [i.e. update product as a staff]
        public void updateDevice(String name,String type,String price,String stock) throws SQLException{
-        st.executeLargeUpdate("UPDATE ELIJAH.DEVICE SET \"NAME\"='"+name+"',\"TYPE\"='"+type+"',PRICE='"+price+"',STOCK='"+stock+"'");
+        st.executeLargeUpdate("UPDATE ELIJAH.DEVICE SET TYPE='"+type+"' , PRICE='"+price+"' , STOCK='"+stock+"' WHERE NAME = '"+name+"'");
        }
     
     //Delete product [i.e. delete product as a staff]
-       public void deleteDevice(String name) throws SQLException{
-        st.executeUpdate("DELETE FROM ELIJAH.DEVICE WHERE \"NAME\" ='"+name+"'");
+       public void deleteDevice(String name,String type) throws SQLException{
+        st.executeUpdate("DELETE FROM ELIJAH.DEVICE WHERE NAME = '"+name+"' and TYPE='"+type+"'");
        }
        
        public ArrayList<Device> fectDevice() throws SQLException{

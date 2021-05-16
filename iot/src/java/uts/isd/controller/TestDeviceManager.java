@@ -17,7 +17,7 @@ public class TestDeviceManager {
     
     public TestDeviceManager() throws ClassNotFoundException, SQLException{
             connector = new DBConnector();
-            conn = connector.connection();
+            conn = connector.openConnection();
             db = new DeviceManager(conn);
     }
     
@@ -70,7 +70,7 @@ public class TestDeviceManager {
         String type = in.nextLine();
         Device device = db.findDevice(name, type);
         if(device != null ){
-            System.out.println("Device " + device.getName() + "exists in the database.");
+            System.out.println("Device " + device.getName() + " exists in the database.");
         }
         else{
             System.out.println("Device does not exists.");
@@ -103,7 +103,7 @@ public class TestDeviceManager {
         System.out.print("Device type: ");
         String type = in.nextLine();
         if(db.checkDevice(name, type)){
-            db.deleteDevice(name);
+            db.deleteDevice(name,type);
         }
         else{System.out.println("Device does not exists.");}
     }

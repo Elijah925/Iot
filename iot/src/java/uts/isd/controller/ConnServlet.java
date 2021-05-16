@@ -29,6 +29,7 @@ public class ConnServlet extends HttpServlet {
     private AccessLogDAO accessLogDAO;
     private Connection conn;
     private DeviceManager deviceManager;
+    private PaymentManager paymentManager;
         
     @Override 
     public void init() {
@@ -49,6 +50,7 @@ public class ConnServlet extends HttpServlet {
             accessLogDAO = new AccessLogDAO(conn);
             manager = new DBManager(conn);
             deviceManager = new DeviceManager(conn);
+            paymentManager = new PaymentManager(conn);
         } catch (SQLException ex) {
             Logger.getLogger(ConnServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -57,6 +59,8 @@ public class ConnServlet extends HttpServlet {
         session.setAttribute("accessLogDAO", accessLogDAO);
         session.setAttribute("manager", manager);
         session.setAttribute("deviceManager", deviceManager);
+        session.setAttribute("paymentManager", paymentManager);
+        
     }
     @Override
     public void destroy() {

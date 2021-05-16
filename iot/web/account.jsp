@@ -62,24 +62,14 @@
                         </div>
                     </div>
                 </div>
-                
-                                
-                
-                    <% if (user.getUserID() != 1) { %>
+                          
                     <div class="sidebar-expanded col-2 d-none d-md-block">                    
                         <nav class="list-group sticky-top sticky-offset">
                             <a href="EditUserServlet">Edit Details</a>
                             <a href="ViewAccessLogsServlet">Access Logs</a>     
                         </nav>                    
                     </div>
-                    <% } else { %>
-                    <div class="sidebar-expanded col-2 d-none d-md-block">                    
-                        <nav class="list-group sticky-top sticky-offset">
-                           <a href="EditUserServlet">Edit Details</a>
-                            <a href="ViewAccessLogsServlet">Access Logs</a>          
-                        </nav>                    
-                    </div>
-                        <% } %>
+               
             </div>
         </div>       
     </body>

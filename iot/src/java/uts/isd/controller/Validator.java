@@ -14,10 +14,14 @@ import javax.servlet.http.HttpSession;
    private String passwordPattern = "[a-z0-9]{4,}";       
    private String deviceTypePattern = "^[A-Za-z\\s]*";  
    private String deviceIntPattern = "^+?[0-9]*$"; 
-              
+   private String positionPattern = "[a-zA-Z0-9]*";        
+     private String datePattern = "^[0-3]?[0-9]/[0-3]?[0-9]/(?:[0-9]{2})?[0-9]{2}$";    
+   
    public Validator(){    }       
 
-
+    public boolean validatePosition(String position) {
+        return validate(positionPattern, position);
+    }
    public boolean validate(String pattern, String input){       
       Pattern regEx = Pattern.compile(pattern);       
       Matcher match = regEx.matcher(input);       
@@ -28,7 +32,12 @@ import javax.servlet.http.HttpSession;
 
       return  email.isEmpty() || password.isEmpty();   
    }
+   
+   public boolean validateDate(String date){
 
+      return validate(datePattern,date); 
+
+   }     
    
    public boolean validateEmail(String email){                       
       return validate(emailPattern,email);   

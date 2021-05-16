@@ -21,11 +21,12 @@
         <div class="nav">
             <img class="img1" src="css/title.png" alt="background" width=300px height=70px>
             <% if (user != null) { %>
-            <span id="links"><a href="account.jsp" style="text-decoration:none;">Account</a> | <a href="logout.jsp" style="text-decoration:none;">Logout</a></span> 
+            <span id="links"><a href="account.jsp" style="text-decoration:none;">Account</a> | <a href="logout.jsp" style="text-decoration:none;">Logout</a> | <a href="payment.jsp" style="text-decoration:none;"> Payment</a></span>
             <p>Hello ${user.userEmail}</p >
             <% } else { %>
             <span id="links"><a href="RegisterServlet" style="text-decoration:none;">Register</a> | <a href="LoginServlet" style="text-decoration:none;">Login</a></span> 
             <% }%>
+            
         </div>
         <hr style="margin-top: 25px;"/>
 
@@ -35,6 +36,8 @@
             <div style="margin-left: 19%;">
                 <a class="form-text text-info" href="searchdevice.jsp">Search Device</a>
                 <a class="form-text text-info" href="devicepage.jsp">Show All Device</a>
+                <a href="AdminLogin.jsp" style="text-decoration:none;">Admin login </a></span>
+                <a class="form-text text-info" href="add.jsp">Create Order</a>
             </div>
 
             <div class="things">   

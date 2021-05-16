@@ -25,6 +25,7 @@
             String typeErr = (String) session.getAttribute("typeErr");
             String updateErr = (String) session.getAttribute("updateErr");
             String existErr = (String) session.getAttribute("existErr");
+            String typeErrD = (String) session.getAttribute("typeErrD");
             String resultInfor = (String) session.getAttribute("resultInfor");
         %>
         <% if (user != null) { %>
@@ -68,7 +69,7 @@
             <form method="post" action="DeleteDeviceServlet">
                 <table>
                     <tr><td>Device Name: </td><td><input type="text" placeholder="Enter name" name="deviceNameD" required="true"></td></tr>
-                    <tr><td>Device Type </td><td><input type="text" placeholder="Enter type" name="deviceTypeD" required="true"></td></tr>
+                    <tr><td>Device Type </td><td><input type="text" placeholder="<%=(typeErrD != null ? typeErrD : "Enter type")%>" name="deviceTypeD" required="true"></td></tr>
                 </table>
                 <div>
                     <input class="button" type="submit" value="Delete device">

@@ -11,47 +11,36 @@ public class Staff implements Serializable {
     private int ID;
     private String name;
     private String email;
-    private String password;
-    private String phone;
-    private String gender;
-    private String dob;
     private String position;
     private String address;
+    private Boolean status;
     
     public Staff(){}
 
-    public Staff(String name, String email, String password, String phone, String gender, String dob,String position, String address) {
+    public Staff(String name, String email,String position, String address, Boolean status) {
         this.name = name;
         this.email = email;
-        this.password = password;
-        this.phone = phone;
-        this.gender = gender;
-        this.dob = dob;
         this.position = position;
         this.address = address;
+        this.status = status;
     }
     
-    public Staff(int ID, String name, String email, String password, String phone, String gender, String dob,String position, String address) {
+    public Staff(int ID, String name, String email,String position, String address, Boolean status) {
         this.ID = ID;
         this.name = name;
         this.email = email;
-        this.password = password;
-        this.phone = phone;
-        this.gender = gender;
-        this.dob = dob;
         this.position = position;
         this.address = address;
+        this.status = status;
     }
 
-    public void updateInfo(String name, String email, String password, String phone, String gender, String dob, String position, String address) {
+
+    public void updateInfo(String name, String email, String position, String address, Boolean status) {
         this.name = name;
-        this.email = email;
-        this.password = password;
-        this.phone = phone;
-        this.gender = gender;
-        this.dob = dob;     
+        this.email = email;   
         this.position = position;
         this.address = address;
+        this.status = status;
     }
 
     public int getID() {
@@ -78,38 +67,6 @@ public class Staff implements Serializable {
         this.email = email;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getDob() {
-        return dob;
-    }
-
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
-
     public String getPosition() {
         return position;
     }
@@ -125,8 +82,13 @@ public class Staff implements Serializable {
     public void setAddress(String address) {
         this.address = address;
     }
-    
-    
-    
-    
+
+    public Boolean getStatus() {
+        return status;
+    }
+
+    public void setStatus(Boolean stauts) {
+        this.status = status;
+    }  
+
 }
